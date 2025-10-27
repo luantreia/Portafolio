@@ -55,6 +55,34 @@ const projects = [
     repos: { frontend: 'https://github.com/luantreia/GT-front', backend: 'https://github.com/luantreia/GT-back' },
     logo: '/logo.png',
   }
+  {
+    id: 'p3',
+    name: 'No Tocar',
+    status: 'completed',
+    short: 'Pagina Web infestada',
+    description: 'Pagina Web infestada',
+    problem: 'muchos bugs, muchos problemas.',
+    technologies: [
+      'MongoDB',
+      'Express',
+      'React',
+      'Node.js',
+      'React Router DOM',
+      'TypeScript',
+      'TailwindCSS',
+      'Vite',
+      'Testing Library',
+      'Mongoose',
+      'Zod',
+      'JSON Web Token',
+      'bcryptjs',
+      'date-fns',
+      'date-fns-tz',
+    ],    
+    url: 'https://bugs-mu.vercel.app/',
+    repos: { frontend: 'https://github.com/luantreia/GT-front', backend: 'https://github.com/luantreia/GT-back' },
+    logo: '/logo.png',
+  }
 ];
 
 export default projects;
