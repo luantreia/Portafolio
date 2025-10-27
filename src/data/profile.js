@@ -8,7 +8,7 @@ const profile = {
   links: {
     github: 'https://github.com/luantreia',
     linkedin: 'https://www.linkedin.com/in/luan-vi%C3%B1as-piol-695796192/',
-    website: 'https://your-website.com',
+    website: 'https://portafolio-eight-gold.vercel.app/',
   },
   skills: [
     'Frontend', 'Backend', 'Diseño de APIs', 'Testing', 'CI/CD', 'Optimización de rendimiento'

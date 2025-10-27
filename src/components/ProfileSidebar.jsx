@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function ProfileSidebar({ profile }) {
+export default function ProfileSidebar({ profile, isMobileView = false, projectsVisible = true, onToggleProjects }) {
   const initials = profile?.name ? profile.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() : 'NA';
+  const INITIAL_VISIBLE = 15;
+  const technologies = Array.isArray(profile?.technologies) ? profile.technologies : [];
+  const totalTechnologies = technologies.length;
+  const [showAllTechnologies, setShowAllTechnologies] = useState(false);
+  const visibleTechnologies = showAllTechnologies ? technologies : technologies.slice(0, INITIAL_VISIBLE);
+  const shouldShowToggle = totalTechnologies > INITIAL_VISIBLE;
+
+  const toggleTechnologiesView = () => {
+    setShowAllTechnologies((prev) => !prev);
+  };
+
   return (
     <aside className="sidebar">
       <div className="avatar">
@@ -13,6 +24,16 @@ export default function ProfileSidebar({ profile }) {
       </div>
       <h1 className="name">{profile?.name || 'Tu Nombre'}</h1>
       <p className="role">{profile?.role || 'Tu Rol'}</p>
+
+      {isMobileView ? (
+        <button
+          type="button"
+          className="button sidebar-mobile-toggle"
+          onClick={onToggleProjects}
+        >
+          {projectsVisible ? 'Ocultar proyectos' : 'Ver proyectos'}
+        </button>
+      ) : null}
 
       <div className="contact">
         {profile?.location && <div className="contact-item">{profile.location}</div>}
@@ -35,14 +56,23 @@ export default function ProfileSidebar({ profile }) {
         </div>
       </div>
 
-      {profile?.technologies?.length ? (
+      {technologies.length ? (
         <section className="section">
           <h2 className="section-title">Tecnologías</h2>
           <div className="chips">
-            {profile.technologies.map((t) => (
+            {visibleTechnologies.map((t) => (
               <span key={t} className="chip">{t}</span>
             ))}
           </div>
+          {shouldShowToggle && (
+            <button
+              type="button"
+              className="button button-secondary"
+              onClick={toggleTechnologiesView}
+            >
+              {showAllTechnologies ? 'Ver menos' : 'Ver más'}
+            </button>
+          )}
         </section>
       ) : null}
 
