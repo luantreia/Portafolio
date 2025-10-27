@@ -1,0 +1,28 @@
+const projects = [
+  {
+    id: 'p1',
+    name: 'Overtime Dodgeball',
+    status: 'in_progress',
+    short: 'El lugar del Dodgeball.',
+    description: 'Sumergite en el mundo del Dodgeball. Seguí a tu equipo favorito, descubrí los torneos disponibles y unite a la acción. Creá tu propio equipo y empezá a competir.',
+    problem: 'Capturar la historia del dodgeball e invitar a más gente a conocer y participar del deporte.',
+    technologies: ['React', 'React Router', 'React Query', 'Firebase', 'Framer Motion', 'Recharts', 'React Flow', 'ExcelJS', 'XLSX', 'TailwindCSS', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Firebase Admin'],
+    url: 'https://overtime-dodgeball.vercel.app/',
+    repos: { frontend: 'https://github.com/luantreia/overtime-frontend', backend: 'https://github.com/luantreia/overtime' },
+    logo: '/logo.png',
+  },
+  {
+    id: 'p2',
+    name: 'Gestion Tenis',
+    status: 'completed',
+    short: 'gestiona tus clases de tenis.',
+    description: 'Gestiona tus clases de tenis y organiza tu semana con facilidad. Agenda tus clases, mantene un registro de tus alumnos y segui su progreso',
+    problem: 'organizar tu semana, agendar tus clases y ver tus alumnos.',
+    technologies: ['React', 'React Router', 'React Query', 'Firebase', 'Framer Motion', 'Recharts', 'React Flow', 'ExcelJS', 'XLSX', 'TailwindCSS', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Firebase Admin'],
+    url: 'https://gt-gestiontenis.vercel.app/',
+    repos: { frontend: 'https://github.com/luantreia/GT-front', backend: 'https://github.com/luantreia/GT-back' },
+    logo: '/logo.png',
+  }
+];
+
+export default projects;
