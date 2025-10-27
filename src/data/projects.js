@@ -54,7 +54,7 @@ const projects = [
     url: 'https://gt-gestiontenis.vercel.app/',
     repos: { frontend: 'https://github.com/luantreia/GT-front', backend: 'https://github.com/luantreia/GT-back' },
     logo: '/logo.png',
-  }
+  },
   {
     id: 'p3',
     name: 'No Tocar',
